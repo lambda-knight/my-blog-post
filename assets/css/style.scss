@@ -135,3 +135,18 @@ section {
   width: calc(100% - 240px) !important; // サイドバー(200px)+余白(40px)を引いた残り全てを使う
   max-width: none !important;
 }
+
+// Eliminate Left Margin and Maximize Width
+@media screen and (min-width: 64em) {
+  .wrapper {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 20px !important; // 最低限の隙間だけ確保
+  }
+  
+  header {
+    margin-left: 0 !important;
+  }
+}
