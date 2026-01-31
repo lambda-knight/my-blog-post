@@ -11,9 +11,12 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
+            font-size: 15px;
+            /* Reduced from 16px */
+            line-height: 1.7;
+            /* Improved readability */
+            color: #24292e;
+            /* GitHub-like dark gray */
             background-color: #fff;
             margin: 0;
             padding: 0;
@@ -24,45 +27,62 @@
             display: flex;
             flex-wrap: wrap;
             width: 100%;
-            /* Force Wide Width */
             max-width: none;
             margin: 0;
-            /* Remove auto margins */
-            padding: 40px 20px;
+            padding: 40px 40px;
+            /* Increased padding */
             box-sizing: border-box;
         }
 
         /* Sidebar (Left) */
         header {
-            flex: 0 0 20%;
-            /* 20% width */
-            max-width: 300px;
-            /* Optional cap */
-            margin-right: 2%;
-            border-right: 1px solid #eee;
+            flex: 0 0 18%;
+            /* 18% width */
+            max-width: 280px;
+            margin-right: 3%;
+            border-right: 1px solid #eaecef;
             padding-right: 20px;
         }
 
-        /* Main Content (Right) */
+        /* Main Content (Center) */
         section {
             flex: 1;
-            /* Takes remaining space (approx 78%) */
+            /* Takes remaining space */
+            max-width: 900px;
+            /* Limit line length for readability */
             min-width: 0;
-            /* Prevents overflow */
+        }
+
+        /* Right Spacer (Empty) */
+        .spacer-right {
+            flex: 0 0 15%;
+            /* Right margin space */
+            display: block;
+        }
+
+        @media (max-width: 1200px) {
+            .spacer-right {
+                display: none;
+            }
+
+            /* Hide spacer on smaller screens */
         }
 
         /* Typography */
         h1,
         h2,
         h3 {
-            color: #2c3e50;
+            color: #24292e;
             margin-top: 1.5em;
+            line-height: 1.25;
         }
 
         h1 {
-            border-bottom: 2px solid #3498db;
+            border-bottom: 1px solid #eaecef;
             padding-bottom: 0.3em;
-            font-size: 2.2em;
+            font-size: 1.8em;
+            /* Reduced from 2.2em */
+            font-weight: 600;
         }
 
         h2 {
