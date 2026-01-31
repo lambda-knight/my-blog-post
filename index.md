@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Blog Index"
+---
+
 # Tech Blog
 
 技術開発の実験ログやポエムを置いています。
