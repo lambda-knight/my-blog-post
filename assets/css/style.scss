@@ -1,17 +1,132 @@
----
----
-
-// 1. Layout Variables Override
-$content-width: 1200px; // 全体の最大幅を広げる
-$header-width: 200px;   // 左サイドバー（インデックス）を細くする（標準は270px）
+--- --- // 1. Layout Variables Override
+$content-width: 1200px;
+$header-width: 200px;
 
 // 2. Load Theme
 @import "{{ site.theme }}";
 
-// 3. Custom Styles
-// 以前非表示にしたボタン類を表示に戻す
-header ul, header p.view {
-  display: block; 
+// 3. Custom Styles for "Cooler" Look
+
+// General Typography
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #333;
+  line-height: 1.7;
 }
 
-// モバイル表示調整などあればここに追記
+section {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid #3498db;
+    padding-left: 0.5em;
+    background: #f4f9fd;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 0.2em;
+  }
+
+  p {
+    margin-bottom: 1.5em;
+  }
+
+  // Links
+  a {
+    color: #3498db;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Blockquotes
+  blockquote {
+    border-left: 5px solid #e74c3c;
+    background: #f9f9f9;
+    color: #555;
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    font-style: italic;
+  }
+
+  // Code & Pre
+  code {
+    background: #f4f5f7;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #c7254e;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  }
+
+  pre {
+    background: #282c34;
+    color: #abb2bf;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+
+    code {
+      background: none;
+      color: inherit;
+      padding: 0;
+      border: none;
+    }
+  }
+
+  // Images
+  img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 1.5em 0;
+  }
+
+  // Lists
+  ul,
+  ol {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+// Header refinements
+header {
+  h1 {
+    font-size: 1.6em;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: #aaa;
+  }
+}
