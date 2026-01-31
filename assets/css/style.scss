@@ -1,5 +1,5 @@
 --- --- // 1. Layout Variables Override
-$content-width: 1200px;
+$content-width: 1400px;
 $header-width: 200px;
 
 // 2. Load Theme
@@ -129,4 +129,9 @@ header {
     font-size: 0.9em;
     color: #aaa;
   }
+}
+// Override Section Width specifically
+section {
+  width: calc(100% - 240px) !important; // サイドバー(200px)+余白(40px)を引いた残り全てを使う
+  max-width: none !important;
 }
