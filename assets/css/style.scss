@@ -150,3 +150,23 @@ section {
     margin-left: 0 !important;
   }
 }
+
+// FORCE WIDE LAYOUT 
+@media screen { 
+  .wrapper {
+    width: 95% !important;
+    max-width: 1800px !important;
+    margin: 0 auto !important;
+  }
+  
+  section {
+    width: 80% !important;
+    max-width: none !important;
+    float: right !important;
+  }
+  
+  header {
+    width: 18% !important;
+    float: left !important;
+  }
+}
