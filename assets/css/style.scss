@@ -1,45 +1,17 @@
 ---
 ---
 
-// 1. 変数オーバーライド
-$content-width: 1100px;
+// 1. Layout Variables Override
+$content-width: 1200px; // 全体の最大幅を広げる
+$header-width: 200px;   // 左サイドバー（インデックス）を細くする（標準は270px）
 
-// 2. テーマ読み込み
+// 2. Load Theme
 @import "{{ site.theme }}";
 
-// 3. レイアウト変更 (1カラム化)
-@media screen and (min-width: 64em) {
-  .wrapper {
-    display: block;
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  header {
-    float: none;
-    width: 100%;
-    position: static;
-    text-align: left;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-  }
-  
-  // インデックス（ダウンロードボタン等）を非表示にする
-  header ul, header p.view {
-    display: none;
-  }
-
-  section {
-    float: none;
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-// モバイル等でもヘッダーの不要なボタンを消す
+// 3. Custom Styles
+// 以前非表示にしたボタン類を表示に戻す
 header ul, header p.view {
-  display: none;
+  display: block; 
 }
+
+// モバイル表示調整などあればここに追記
