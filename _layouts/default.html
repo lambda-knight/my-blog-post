@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% seo %}
+    <!-- Generic CSS -->
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Main Container - WIDE */
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1400px; /* Force Wide Width */
+        margin: 0 auto;
+        padding: 40px 20px;
+        box-sizing: border-box;
+      }
+
+      /* Sidebar (Left) */
+      header {
+        flex: 0 0 220px; /* Fixed width */
+        margin-right: 40px;
+        border-right: 1px solid #eee;
+        padding-right: 20px;
+      }
+
+      /* Main Content (Right) */
+      section {
+        flex: 1; /* Takes remaining space */
+        min-width: 0; /* Prevents overflow */
+      }
+      
+      /* Typography */
+      h1, h2, h3 { color: #2c3e50; margin-top: 1.5em; }
+      h1 { border-bottom: 2px solid #3498db; padding-bottom: 0.3em; font-size: 2.2em;}
+      h2 { border-left: 5px solid #3498db; padding-left: 10px; background: #f4f9fd; font-size: 1.8em;}
+      
+      a { color: #3498db; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      
+      code { background: #f6f8fa; padding: 3px 6px; border-radius: 3px; font-family: monospace; color: #d63259;}
+      pre { background: #2d333b; color: #adbac7; padding: 15px; border-radius: 6px; overflow: auto; }
+      pre code { background: none; color: inherit; padding: 0; }
+      
+      blockquote { border-left: 4px solid #dfe2e5; margin: 0; padding: 0 1em; color: #6a737d; }
+      
+      img { max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+      
+      table { border-collapse: collapse; width: 100%; margin-bottom: 1em; }
+      th, td { border: 1px solid #dfe2e5; padding: 6px 13px; }
+      th { background-color: #f6f8fa; }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .wrapper { flex-direction: column; }
+        header { border-right: none; border-bottom: 1px solid #eee; margin-right: 0; padding-bottom: 20px; margin-bottom: 30px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | relative_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        
+        {% if site.show_downloads %}
+        <ul>
+          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+        </ul>
+        {% endif %}
+      </header>
+      
+      <section>
+        {{ content }}
+      </section>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>
