@@ -1,0 +1,7 @@
+---
+---
+
+// Override layout width to make it wider
+$content-width: 1200px;
+
+@import "{{ site.theme }}";
