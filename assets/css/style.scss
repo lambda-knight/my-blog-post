@@ -1,7 +1,33 @@
 ---
 ---
 
-// Override layout width to make it wider
-$content-width: 1200px;
+// 1. 変数オーバーライド（コンテンツ幅を広げる）
+$content-width: 1100px;
 
+// 2. テーマの読み込み
 @import "{{ site.theme }}";
+
+// 3. CSSによるレイアウト強制変更（左サイドバーを廃止して上部にまとめる）
+@media screen and (min-width: 64em) {
+  .wrapper {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header {
+    float: none;
+    width: 100%;
+    position: static;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  section {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+}
