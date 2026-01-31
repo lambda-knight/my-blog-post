@@ -34,9 +34,11 @@
 
         /* Sidebar (Left) */
         header {
-            flex: 0 0 300px;
-            /* Fixed width */
-            margin-right: 40px;
+            flex: 0 0 20%;
+            /* 20% width */
+            max-width: 300px;
+            /* Optional cap */
+            margin-right: 2%;
             border-right: 1px solid #eee;
             padding-right: 20px;
         }
@@ -44,7 +46,7 @@
         /* Main Content (Right) */
         section {
             flex: 1;
-            /* Takes remaining space */
+            /* Takes remaining space (approx 78%) */
             min-width: 0;
             /* Prevents overflow */
         }
